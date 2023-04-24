@@ -1,0 +1,11 @@
+{
+  "groups": [
+    {
+      "name": "mini-email",
+      "type": "com.miniw.external.client.email.config.EmailParamsConfig",
+      "sourceType": "com.miniw.external.client.email.config.EmailParamsConfig"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}

@@ -1,0 +1,4 @@
+com/miniw/persistence/service/TDfOrderLogService.class
+com/miniw/persistence/mapper/TDfOrderLogMapper.class
+com/miniw/persistence/model/TDfOrderLog.class
+com/miniw/persistence/service/impl/TDfOrderLogServiceImpl.class

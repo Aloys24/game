@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="10 seconds" debug="false">
+
+    <!-- 将日志输出在该目录下 -->
+<!--    <property name="contextPath" value="/data/logs/data-free"/>-->
+    <property name="contextPath" value="./logs"/>
+    <!-- 日志的上下文路径 -->
+    <property name="logPath" value="${contextPath}"/>
+    <!-- 配置日志的滚动时间 -->
+    <property name="maxHistory" value="150"/>
+    <property name="logPattern"
+              value="%d{HH:mm:ss.SSS} [%thread] [%X{traceId}] %-5level %logger{36}.%M - %msg%n"/>
+    <property name="consoleLogPattern"
+              value="%d{YYYY-MM-dd HH:mm:ss.SSS} [%thread] [%X{traceId}] %highlight(%-5level) %cyan(%logger{36}) - %msg%n"/>
+    <!-- 打印日志到控制台 -->
+    <appender name="rootConsole" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoder 在控制台打印日志的格式 -->
+        <encoder>
+            <pattern>${consoleLogPattern}</pattern>
+        </encoder>
+        <!--        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">-->
+        <!--            <level>INFO</level>-->
+        <!--            <level>DEBUG</level>-->
+        <!--        </filter>-->
+    </appender>
+
+    <appender name="rootRollingInfo" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${logPath}/log/info.log</file>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logPath}/log/info.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- 设置日志的滚动时间 -->
+            <maxHistory>${maxHistory}</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${logPattern}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+
+    <appender name="rootRollingDebug" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${logPath}/log/debug.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logPath}/log/debug.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- 设置日志的滚动时间 -->
+            <maxHistory>${maxHistory}</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${logPattern}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+
+    <appender name="rootRollingError" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${logPath}/log/error.log</file>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logPath}/log/error.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- 设置日志的滚动时间 -->
+            <maxHistory>${maxHistory}</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${logPattern}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <!-- error/root.log文件中的日志级别是 ERROR以上的级别 -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="rootRollingError"/>
+        <appender-ref ref="rootConsole"/>
+        <appender-ref ref="rootRollingInfo"/>
+    </root>
+
+</configuration>

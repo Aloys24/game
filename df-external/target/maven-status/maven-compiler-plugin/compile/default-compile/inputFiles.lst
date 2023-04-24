@@ -1,0 +1,9 @@
+/Users/blacker/IdeaProjects/mini-datafree/df-external/src/main/java/com/miniw/external/client/openlogs/OpenLogsClient.java
+/Users/blacker/IdeaProjects/mini-datafree/df-external/src/main/java/com/miniw/external/client/minicoin/params/CoinPayResultCode.java
+/Users/blacker/IdeaProjects/mini-datafree/df-external/src/main/java/com/miniw/external/client/minicoin/exception/CoinPayException.java
+/Users/blacker/IdeaProjects/mini-datafree/df-external/src/main/java/com/miniw/external/client/email/config/EmailParamsConfig.java
+/Users/blacker/IdeaProjects/mini-datafree/df-external/src/main/java/com/miniw/external/client/minicoin/MiniCoinClient.java
+/Users/blacker/IdeaProjects/mini-datafree/df-external/src/main/java/com/miniw/external/client/minicoin/config/MiniCoinPayConfig.java
+/Users/blacker/IdeaProjects/mini-datafree/df-external/src/main/java/com/miniw/external/client/minicoin/response/CoinPayResponse.java
+/Users/blacker/IdeaProjects/mini-datafree/df-external/src/main/java/com/miniw/external/client/email/api/EmailApi.java
+/Users/blacker/IdeaProjects/mini-datafree/df-external/src/main/java/com/miniw/external/client/openlogs/params/OpenLogsConstant.java

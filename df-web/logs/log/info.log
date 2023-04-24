@@ -1,0 +1,20 @@
+11:51:20.579 [main] [] INFO  com.miniw.web.DfWebApplicationTests.logStartupProfileInfo - The following profiles are active: dev
+11:51:21.112 [main] [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode!
+11:51:21.115 [main] [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+11:51:21.135 [main] [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 9ms. Found 0 Redis repository interfaces.
+11:51:21.411 [main] [] INFO  o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=d1d4ee2e-fa8f-3fd8-8cbc-643f0113b198
+11:51:21.636 [main] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'com.miniw.external.client.openlogs.OpenLogsClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+11:51:21.637 [main] [] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'com.miniw.external.client.minicoin.MiniCoinClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+11:51:23.106 [main] [] INFO  org.redisson.Version.logVersion - Redisson 3.12.0
+11:51:23.349 [redisson-netty-4-7] [] INFO  o.r.c.p.MasterPubSubConnectionPool.lambda$run$0 - 1 connections initialized for 10.0.0.203/10.0.0.203:6379
+11:51:23.349 [redisson-netty-4-6] [] INFO  o.r.c.pool.MasterConnectionPool.lambda$run$0 - 2 connections initialized for 10.0.0.203/10.0.0.203:6379
+11:51:24.121 [main] [] INFO  c.n.c.sources.URLConfigurationSource.<init> - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+11:51:24.132 [main] [] INFO  c.n.c.sources.URLConfigurationSource.<init> - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+11:51:24.269 [main] [] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+11:51:24.620 [main] [] INFO  o.s.s.c.ThreadPoolTaskScheduler.initialize - Initializing ExecutorService 'taskScheduler'
+11:51:25.680 [main] [] INFO  o.s.cloud.commons.util.InetUtils.convertAddress - Cannot determine local hostname
+11:51:25.751 [main] [] INFO  com.miniw.web.DfWebApplicationTests.logStarted - Started DfWebApplicationTests in 7.732 seconds (JVM running for 8.543)
+11:51:26.461 [main] [] INFO  io.lettuce.core.EpollProvider.<clinit> - Starting without optional epoll library
+11:51:26.463 [main] [] INFO  io.lettuce.core.KqueueProvider.<clinit> - Starting without optional kqueue library
+11:51:26.974 [SpringContextShutdownHook] [] INFO  o.s.s.c.ThreadPoolTaskScheduler.shutdown - Shutting down ExecutorService 'taskScheduler'
+11:51:26.974 [SpringContextShutdownHook] [] INFO  o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'

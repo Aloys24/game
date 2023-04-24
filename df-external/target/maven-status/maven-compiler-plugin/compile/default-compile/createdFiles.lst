@@ -1,0 +1,11 @@
+com/miniw/external/client/minicoin/response/CoinPayResponse.class
+com/miniw/external/client/minicoin/response/CoinPayResponse$ResultData.class
+com/miniw/external/client/minicoin/MiniCoinClient.class
+META-INF/spring-configuration-metadata.json
+com/miniw/external/client/minicoin/params/CoinPayResultCode.class
+com/miniw/external/client/minicoin/config/MiniCoinPayConfig$PhpMappingJackson2HttpMessageConverter.class
+com/miniw/external/client/minicoin/exception/CoinPayException.class
+com/miniw/external/client/openlogs/OpenLogsClient.class
+com/miniw/external/client/openlogs/params/OpenLogsConstant.class
+com/miniw/external/client/minicoin/config/MiniCoinPayConfig.class
+com/miniw/external/client/email/config/EmailParamsConfig.class
