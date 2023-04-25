@@ -46,7 +46,6 @@ public class ScheduledTask {
     private OpenLogsClient openLogsClient;
 
     /**
-     * 迷你币下发补偿任务
      * （每1分钟执行一次
      */
     @Async // 多任务下可开启
@@ -60,7 +59,7 @@ public class ScheduledTask {
                 break;
             }
 
-            log.info("迷你币补偿任务执行：{}", LocalDateTime.now());
+            log.info("补偿任务执行：{}", LocalDateTime.now());
             PayFailedDto failedDto = JSONObject.parseObject(
                     String.valueOf(redisUtil.lRightPop(RedisKeyConstant.PAY_FAILED_LIST)), PayFailedDto.class);
             final String uin = failedDto.getUin();
