@@ -146,17 +146,17 @@ public class ScheduledTask {
 //    }
 
 
-    /**
-     * 清除手机号当月限制
-     * （每个月1号凌晨
-     */
-    @Async
-    @Scheduled(cron = "0 0 0 1 * ? ")
-    public void delLimitMonthKeyMonth() {
-//        log.info("迷你号清除手机号当月限制开始执行：{}", LocalDateTime.now());
-        // 删除整个命名空间（ 用以处理可能存在的未过期的值
-        redisUtil.delKeyByPrefix(null, RedisKeyConstant.LIMIT_KEY_MONTHS);
-    }
+//    /**
+//     * 清除手机号当月限制
+//     * （每个月1号凌晨
+//     */
+//    @Async
+//    @Scheduled(cron = "0 0 0 1 * ? ")
+//    public void delLimitMonthKeyMonth() {
+////        log.info("迷你号清除手机号当月限制开始执行：{}", LocalDateTime.now());
+//        // 删除整个命名空间（ 用以处理可能存在的未过期的值
+//        redisUtil.delKeyByPrefix(null, RedisKeyConstant.LIMIT_KEY_MONTHS);
+//    }
 
 
 }
