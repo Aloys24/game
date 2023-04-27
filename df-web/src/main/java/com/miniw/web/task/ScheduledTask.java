@@ -129,21 +129,21 @@ public class ScheduledTask {
                 log.info("当前任务执行条数：{}", count);
             }
             log.error("迷你号：{}补发失败：{}, 五分钟后再次重试", uin, coinPayResponse.getReturn_msg());
-        }while (count.get() <= 50);
+        } while (count.get() <= 50);
     }
 
 
-    /**
-     * 清除迷你号绑定手机次数限制
-     * （每个月5号凌晨
-     */
-    @Async
-    @Scheduled(cron = "0 0 0 5 * ? ")
-    public void delBindPhonesKeyMonth(){
-        log.info("迷你号绑定手机次数缓存清除任务开始执行：{}", LocalDateTime.now());
-        // 删除整个命名空间（ 用以处理可能存在的未过期的值
-        redisUtil.delKey(RedisKeyConstant.BIND_PHONES_UIN);
-    }
+//    /**
+//     * 清除迷你号绑定手机次数限制
+//     * （每个月5号凌晨
+//     */
+//    @Async
+//    @Scheduled(cron = "0 0 0 5 * ? ")
+//    public void delBindPhonesKeyMonth(){
+//        log.info("迷你号绑定手机次数缓存清除任务开始执行：{}", LocalDateTime.now());
+//        // 删除整个命名空间（ 用以处理可能存在的未过期的值
+//        redisUtil.delKey(RedisKeyConstant.BIND_PHONES_UIN);
+//    }
 
 
     /**
@@ -152,7 +152,7 @@ public class ScheduledTask {
      */
     @Async
     @Scheduled(cron = "0 0 0 1 * ? ")
-    public void delLimitMonthKeyMonth(){
+    public void delLimitMonthKeyMonth() {
 //        log.info("迷你号清除手机号当月限制开始执行：{}", LocalDateTime.now());
         // 删除整个命名空间（ 用以处理可能存在的未过期的值
         redisUtil.delKeyByPrefix(null, RedisKeyConstant.LIMIT_KEY_MONTHS);
